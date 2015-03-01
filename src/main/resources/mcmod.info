@@ -1,0 +1,16 @@
+[
+{
+  "modid": "imaginemod",
+  "name": "ImagineScape Custom Mod",
+  "description": "A mod for the ImagineScape server.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["smbarbour"],
+  "credits": "Caitlyn for writing the plugin previously used",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
