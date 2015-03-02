@@ -1,4 +1,4 @@
-package tk.imaginescape.imaginemod;
+package tk.imaginescape.imaginemod.events;
 
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -12,6 +12,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 import net.minecraft.world.chunk.IChunkProvider;
+import tk.imaginescape.imaginemod.ImagineMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -28,7 +29,7 @@ public class PlayerEventHandler {
     public void doPlayerLogin(PlayerEvent.PlayerLoggedInEvent e) {
         FMLLog.info("ImagineMod: " + e.player.getDisplayName() + " logged in.");
         if (e.player.dimension != 0) {
-            ChunkCoordinates spawnPoint = e.player.worldObj.getSpawnPoint();
+            ChunkCoordinates spawnPoint = new ChunkCoordinates(ImagineMod.spawnX, ImagineMod.spawnY, ImagineMod.spawnZ);
             relocateQueue.add(new Relocation(e.player, 0, spawnPoint));
         }
     }
